@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socialkart Website</title>
+  <!-- <link rel="stylesheet" href="e-commerce.css">
+  <script src="e-commerce.js" defer></script> -->
+  <style>
+    /* Common styles for small screens */
+    body {
+      font-size: 16px;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    /* Styles for larger screens (e.g., tablets and desktops) */
+    @media screen and (min-width: 768px) {
+      body {
+        font-size: 18px;
+      }
+
+      nav ul {
+        text-align: right;
+      }
+
+      nav ul li {
+        margin-right: 30px;
+      }
+    }
+
+    /* Add more media queries and responsive styles as needed */
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\jaing\Pictures\9e526598c5a74dd0a73ed6bb41693a0f.png" height="125px" alt="">
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#"><img src="https://static.thenounproject.com/png/5213093-200.png" alt="" class="bag"></a></li>
+    </ul>
+  </nav>
+
+  <!-- Rest of your HTML content -->
+  <div class="slider-container">
+    <ul class="slider-content">
+        <li class="slider-slide"><img src="https://assets.ajio.com/cms/AJIO/MOBILE/05092023-M-UHP-LTD-menswear-teamspirit-performax-under299.jpg" alt="Slide 1"></li>
+        <li class="slider-slide"><img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_auto:eco,w_600,c_limit,fl_progressive/assets/images/retaillabs/2023/9/2/a57b5d74-8216-43dc-b2cc-e5f2fa8fccbd1693650910605-image_png77337026.png" alt="Slide 2"></li>
+        <li class="slider-slide"><img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_auto:eco,w_600,c_limit,fl_progressive/assets/images/2023/8/29/06ad2a30-f2bf-461f-a454-01ce5c8be3931693254720868-Best-Of-Casual-Shoes.jpg" alt="Slide 3"></li>
+        <li class="slider-slide"><img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_auto:eco,w_600,c_limit,fl_progressive/assets/images/2023/8/29/ceac1130-9d7d-4048-be47-1999eafe7cde1693254720992-Contemporary-Watches.jpg" alt="Slide 4"></li>
+    </ul>
+</div>
+<button class="slider-prev">Previous</button>
+<button class="slider-next">Next</button>
+  
+  <section>
+    <h2>Featured Products</h2>
+    <nav>
+        <ul>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Footwear</a></li>
+          <li><a href="#">Furniture</a></li>
+        </ul>
+      </nav>
+      <img src="https://assets.ajio.com/cms/AJIO/MOBILE/05092023-M-UHP-LTD-puma-min65-2.jpg" alt="" style="width: 100%;height: 215px;" >
+    
+  <div class="item" id="shoes">
+    <!-- <div class="product">
+      <img src="https://w7.pngwing.com/pngs/471/670/png-transparent-nike-flywire-shoe-nike-acg-boot-nike-white-outdoor-shoe-sneakers.png" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>nike flywire shoes</p>
+      <p>$19.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqbzaQJImT2nFBRCIWgUIDyqwVKYF1RZtYGA&s" alt="Product 1">
+      <h3>Product 2</h3>
+      <p>nike air force 1</p>
+      <p>$19.99</p>
+      <button>Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://png.pngitem.com/pimgs/s/426-4267762_shoe-hd-png-download.png" alt="Product 2">
+      <h3>Product 3</h3>
+      <p>adidas shoes</p>
+      <p>$24.99</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://spng.pngfind.com/pngs/s/63-636405_1024-x-1024-4-converse-black-and-white.png" alt="Product 3">
+        <h3>Product 4</h3>
+        <p> converse shoes </p>
+        <p>$1200.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRueqxdUiP4JOQ3w3Nx5GO54erUJqhXs78w0A&s" alt="Product 4">
+        <h3>Product 5</h3>
+        <p>puma shoes</p>
+        <p>$400.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://static.nike.com/a/images/t_default/1799bdd9-01f2-4faa-9e29-5eb5f0a15225/jordan-1-ko-shoes-RLJcHC.png" alt="Product 5">
+        <h3>Product 6</h3>
+        <p>nike jordan force 2</p>
+        <p>$800.00</p>
+        <button>Add to Cart</button>
+      </div> -->
+  </div>
+   <!-- watch banner div  -->
+  <div class="watch_image">
+    <img src="https://www.titan.co.in/wps/wcm/connect/titanrt/a8726a97-da59-4fdd-bf9e-c06ebf6cb9be/desktop/TD_Smartsale_160823_espot.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-a8726a97-da59-4fdd-bf9e-c06ebf6cb9be-desktop-oDZpzOT" alt="" style="width: 100%;height: 400px;" id="imageElement" >
+  </div>
+    <!-- <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/8/29/77978c9f-1179-4bd6-8172-b868770490b01693292725569-Men-Page.jpg" style=""" alt=""> -->
+    <div class="item" id="watch">
+      <div class="product1">
+        <img src="https://i02.appmifile.com/246_operator_in/13/05/2021/fdc177eb158a99179e6b649d6aff2b75!800x800!85.png" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>mi watch</p>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product1">
+        <img src="https://shreepng.com/img/OutSide/Electronic/Smartwatch/apple%20watch%20alum%20spacegray.png" alt="Product 1">
+        <h3>Product 2</h3>
+        <p>Apple watch</p>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+      </div>
+      
+      <div class="product1">
+        <img src="https://shreepng.com/img/OutSide/Electronic/Smartwatch/Noise%20ColorFit%20Ultra%20Smartwatch%20Space%20Blue.png" alt="Product 2">
+        <h3>Product 3</h3>
+        <p>noise watch</p>
+        <p>$24.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product1">
+          <img src="https://shreepng.com/img/OutSide/Electronic/Smartwatch/Samsung%20Galaxy%20Watch4%20Bluetooth%20Black.png" alt="Product 3">
+          <h3>Product 4</h3>
+          <p> samsung watch</p>
+          <p>$1200.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product1">
+          <img src="https://shreepng.com/img/OutSide/Electronic/Smartwatch/AppleWatch%205%20Aluminum%20SpaceGray.png" alt="Product 4">
+          <h3>Product 5</h3>
+          <p>apple watch</p>
+          <p>$400.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product1">
+          <img src="https://shreepng.com/img/OutSide/Electronic/Smartwatch/Apple%20Watch%20Series%207%20Starlight%20Aluminum%20Pure%20Platinum%20Black%20Nike%20Sport%20Band.png" alt="Product 5">
+          <h3>Product 6</h3>
+          <p>apple watch</p>
+          <p>$800.00</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+  </section>
+
+  
+  
+  <footer>
+    <p>&copy; MY Socialkart  Website. All rights reserved.</p>
+  </footer>
+
+
+
+
+
+
+  
+
+</body>
+</html>
+
+
+
+https://assets.ajio.com/cms/AJIO/MOBILE/05092023-M-UHP-LTD-menswear-teamspirit-performax-under299.jpg
+https://assets.myntassets.com/f_webp,dpr_1.5,q_auto:eco,w_600,c_limit,fl_progressive/assets/images/retaillabs/2023/9/2/a57b5d74-8216-43dc-b2cc-e5f2fa8fccbd1693650910605-image_png77337026.png
+https://assets.myntassets.com/f_webp,dpr_1.5,q_auto:eco,w_600,c_limit,fl_progressive/assets/images/2023/8/29/06ad2a30-f2bf-461f-a454-01ce5c8be3931693254720868-Best-Of-Casual-Shoes.jpg
+https://assets.myntassets.com/f_webp,dpr_1.5,q_auto:eco,w_600,c_limit,fl_progressive/assets/images/2023/8/29/ceac1130-9d7d-4048-be47-1999eafe7cde1693254720992-Contemporary-Watches.jpg
