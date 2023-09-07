@@ -1,41 +1,89 @@
-body {
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+html,body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
+    height: 100%;
+    width: 100%;
+}
   
   header {
-    background-color: #333;
+    background-color:#0f0b0b;
     color: #fff;
     padding: 20px;
     text-align: center;
+    
   }
-  
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    img {
+      height: auto; /* Allow the image to scale with the viewport width */
+      max-width: 100%; /* Ensure the image doesn't overflow its container */
+    }
+  }
+
   h1 {
     margin: 0;
   }
+  /* nav css */
+
   
+  /* Base styles for the navigation */
+nav {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  text-align: center;
+  display: inline-block; /* Change display to inline-block to control spacing */
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+/* Responsive styles for the navigation */
+@media screen and (max-width: 768px) {
   nav {
-    background-color: #f4f4f4;
-    padding: 10px;
+    padding: 5px; /* Reduce padding for smaller screens */
   }
-  
+
   nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    flex-direction: column; /* Center-align the list items */
   }
-  
+
   nav li {
-    display: inline;
-    margin-right: 10px;
+    display: block; /* Stack navigation items vertically */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 5px; /* Add spacing between navigation items */
   }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px;
-  }
+}
+
+/* nav css end */
+
+ 
+
   
   section {
     padding: 20px;
@@ -48,21 +96,210 @@ body {
     text-align: center;
   }
   
+  
+  #shoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
   .product {
+    flex: 1;
+    margin: 10px;
     border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 20px;
+    text-align: center;
+    max-width: 300px; /* Adjust maximum width as needed */
   }
   
   .product img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
   }
   
-  .product h3 {
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    #shoes {
+      flex-direction: column; /* Stack products vertically on smaller screens */
+    }
+  
+    .product {
+      max-width: none; /* Remove max-width for smaller screens */
+    }
+  }
+  /* watch banner */
+
+.watch_image {
+  max-width: 100%;
+  height: auto;
+  text-align: center; /* Center the image horizontally */
+}
+
+#imageElement {
+  max-width: 100%;
+  height: auto;
+}
+
+
+  
+/* watch banner end */
+
+
+  
+.product1 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.product1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product1 h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.product1 p {
+  margin-bottom: 20px;
+}
+
+/* Responsive styles for the product1 */
+.item {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Use fractional units for equal-width columns */
+  gap: 10px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .item {
+    grid-template-columns: 1fr; /* Single column layout on even smaller screens */
+  }
+}
+
+
+
+
+
+
+ /* watch css end  */
+ 
+
+/* ul {
+    list-style: none;
+    padding: 0;
+} */
+
+.bag{
+    border-radius: 20%;
+    width: 34px;
+    height: 30px;
+    line-height: 33px;
+    text-align: right;
+    cursor: pointer;
+    justify-content: right;
+}
+/* slider start */
+
+
+
+
+
+
+#search-bar {
+  padding: 10px;
+  width: 90%;
+  margin-right: 10px;
+  font-size: 16px;
+  
+}
+
+/* button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  
+} */
+/* Default button styles */
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color:white;
+  border:none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+  background-color:orange;
+  color:black;
+}
+
+
+
+
+/* Container for search results */
+#search {
+  margin-top: 20px;
+}
+
+/* Style for individual search results */
+.dd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  
+}
+
+.dd img {
+  max-width: 10%;
+  height: auto;
+}
+
+.dd p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  #search-bar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .dd {
+    flex-direction: row;
+  }
+
+  .dd img {
+    max-width: 50%;
+    margin-right: 10px;
+  }
+
+  .dd p {
     margin-top: 0;
   }
-  
-  .product p {
-    margin-bottom: 0;
-  }
+}
+
+       /* search data end */
