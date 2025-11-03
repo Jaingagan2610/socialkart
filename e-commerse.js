@@ -6,13 +6,13 @@ console.log("Hello World");
 //     const carousel = new bootstrap.Carousel(document.getElementById('carouselExampleInterval'), {
 //       interval: 5000,
 //     });
-  
+
 //     carousel.addEventListener('slide.bs.carousel', function (event) {
 //       const currentIndex = event.from;
 //       // You can perform custom actions here based on the currentIndex
 //     });
 //   });
-  
+
 
 
 // slider end
@@ -88,12 +88,12 @@ products.forEach((product) => {
   productDiv.classList.add("product");
   productDiv.innerHTML = `
         <img src="${product.image}" alt="${product.name}">
-        <h3>${product.name}</h3>
+        
         <p>${product.description}</p>
         <p>$${product.price.toFixed(2)}</p>
         <button onclick="addToCart(${JSON.stringify(
-          product
-        )})">Add to Cart</button>
+    product
+  )})">Add to Cart</button>
     `;
   productListContainer.appendChild(productDiv);
 });
@@ -113,35 +113,34 @@ const products1 = [
   {
     name: "Product 2",
     image:
-      "https://shreepng.com/img/OutSide/Electronic/Smartwatch/apple%20watch%20alum%20spacegray.png",
+      "https://i02.appmifile.com/246_operator_in/13/05/2021/fdc177eb158a99179e6b649d6aff2b75!800x800!85.png",
     description: "Apple watch",
     price: 19.99,
   },
   {
     name: "Product 3",
     image:
-      "https://shreepng.com/img/OutSide/Electronic/Smartwatch/Noise%20ColorFit%20Ultra%20Smartwatch%20Space%20Blue.png",
+      "https://i02.appmifile.com/246_operator_in/13/05/2021/fdc177eb158a99179e6b649d6aff2b75!800x800!85.png",
     description: "noise watch",
     price: 2499,
   },
   {
     name: "Product 4",
     image:
-      "https://shreepng.com/img/OutSide/Electronic/Smartwatch/Samsung%20Galaxy%20Watch4%20Bluetooth%20Black.png",
-    description: "samsung watch",
+      "https://i02.appmifile.com/246_operator_in/13/05/2021/fdc177eb158a99179e6b649d6aff2b75!800x800!85.png", description: "samsung watch",
     price: 1200.0,
   },
   {
     name: "Product 5",
     image:
-      "https://shreepng.com/img/OutSide/Electronic/Smartwatch/AppleWatch%205%20Aluminum%20SpaceGray.png",
+      "https://i02.appmifile.com/246_operator_in/13/05/2021/fdc177eb158a99179e6b649d6aff2b75!800x800!85.png",
     description: "apple watch",
     price: 400.0,
   },
   {
     name: "Product 6",
     image:
-      "https://shreepng.com/img/OutSide/Electronic/Smartwatch/Apple%20Watch%20Series%207%20Starlight%20Aluminum%20Pure%20Platinum%20Black%20Nike%20Sport%20Band.png",
+      "https://i02.appmifile.com/246_operator_in/13/05/2021/fdc177eb158a99179e6b649d6aff2b75!800x800!85.png",
     description: "apple watch",
     price: 400.0,
   },
@@ -155,12 +154,11 @@ products1.forEach((product1) => {
   productDiv.classList.add("product1");
   productDiv.innerHTML = `
                 <img src="${product1.image}" alt="${product1.name}">
-                <h3>${product1.name}</h3>
                 <p>${product1.description}</p>
                 <p>$${product1.price.toFixed(2)}</p>
                 <button onclick="addToCart(${JSON.stringify(
-                  product1
-                )})">Add to Cart</button>
+    product1
+  )})">Add to Cart</button>
             `;
   productsContainer1.appendChild(productDiv);
 });
@@ -181,25 +179,25 @@ products1.forEach((product1) => {
 // search bar
 
 // const result = document.getElementById("search-results");
-const searchbar = document.getElementById("search-bar").addEventListener('input',clicked())
+const searchbar = document.getElementById("search-bar").addEventListener('input', clicked())
 
 
 
 
 
 
- function clicked  () {
+function clicked() {
   const searchbar = document.getElementById("search-bar").value.toLowerCase();
   console.log(searchbar);
-  if(searchbar!=""){
+  if (searchbar != "") {
     console.log("inside if");
-  const place = document.getElementById("search");
-  place.innerHTML = " ";
-  for (let i = 0; i < products.length; i++) {
-    if (products[i].description.includes(searchbar)) {
-      const hi = document.createElement("div");
-      hi.classList.add("dd");
-      hi.innerHTML = `<div>
+    const place = document.getElementById("search");
+    place.innerHTML = " ";
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].description.includes(searchbar)) {
+        const hi = document.createElement("div");
+        hi.classList.add("dd");
+        hi.innerHTML = `<div>
                    <img src="${products[i].image}" alt="Image 1" class="w-full h-auto">
                        <div class="flex flex-col items-center justify-center pt-2">
                        <p class="font-bold">${products[i].description}</p>
@@ -208,10 +206,10 @@ const searchbar = document.getElementById("search-bar").addEventListener('input'
                        </div>
                        </div>
                    `;
-      place.appendChild(hi);
-    //   document.querySelector(".laksh").style.display = "none";
-    }
-    else if(products1[i].description.toLowerCase().includes(searchbar)){
+        place.appendChild(hi);
+        //   document.querySelector(".laksh").style.display = "none";
+      }
+      else if (products1[i].description.toLowerCase().includes(searchbar)) {
         const hi = document.createElement("div");
         hi.classList.add("dd");
         hi.innerHTML = `<div style="display: flex; "> 
@@ -227,15 +225,15 @@ const searchbar = document.getElementById("search-bar").addEventListener('input'
                      `;
         place.appendChild(hi);
         // document.querySelector(".laksh").style.display = "none";
-    }
+      }
 
-}
+    }
   }
-  else{
+  else {
     const free = document.getElementById("search");
-    free.innerHTML =" ";
+    free.innerHTML = " ";
   }
-  
+
 };
 
 // end search bar

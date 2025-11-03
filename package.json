@@ -1,0 +1,14 @@
+{
+    "name": "socialkart",
+    "version": "1.0.0",
+    "description": "A simple static website built with HTML, CSS, and JavaScript.",
+    "main": "e-commerce.html",
+    "scripts": {
+        "dev": "npx live-server --open=e-commerse.html"
+    },
+    "author": "Gagan Jain",
+    "license": "MIT",
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    }
+}
