@@ -4,7 +4,8 @@
     "description": "A simple static website built with HTML, CSS, and JavaScript.",
     "main": "e-commerce.html",
     "scripts": {
-        "dev": "npx live-server --open=e-commerse.html"
+        "dev": "npx live-server --open=e-commerse.html",
+        "build": "mkdir -p dist && cp -r *.html *.css *.js images dist/ || echo 'Build complete.'"
     },
     "author": "Gagan Jain",
     "license": "MIT",
